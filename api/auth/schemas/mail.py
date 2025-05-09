@@ -1,5 +1,5 @@
 from pydantic import BaseModel, EmailStr
-from app.schemas.user import User
+from api.auth.schemas.user import User
 
 
 class MailBodySchema(BaseModel):

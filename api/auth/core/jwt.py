@@ -5,12 +5,12 @@ from fastapi import Response
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
 
-from app.models.user import User
-from app.models.jwt import BlackListToken
-from app.schemas.jwt import JwtTokenSchema, TokenPair
-from app.schemas.mail import MailTaskSchema
-from app.core.exceptions import AuthFailedException
-from app.core.config import (
+from api.auth.models.user import User
+from api.auth.models.jwt import BlackListToken
+from api.auth.schemas.jwt import JwtTokenSchema, TokenPair
+from api.auth.schemas.mail import MailTaskSchema
+from api.auth.core.exceptions import AuthFailedException
+from api.auth.core.config import (
     ACCESS_TOKEN_EXPIRES_MINUTES,
     SECRET_KEY,
     ALGORITHM,

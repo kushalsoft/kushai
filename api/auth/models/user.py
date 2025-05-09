@@ -5,7 +5,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from . import Base
-from app.utils.hash import verify_password,hash_password
+from api.auth.utils.hash import verify_password,hash_password
 
 
 class User(Base):

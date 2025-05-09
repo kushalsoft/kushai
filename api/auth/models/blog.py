@@ -12,7 +12,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from . import Base
-from app.models.user import User
+from api.auth.models.user import User
 
 class Blog(Base):
     __tablename__ = "blogs"

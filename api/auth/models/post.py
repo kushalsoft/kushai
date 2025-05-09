@@ -12,8 +12,8 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from . import Base
-from app.models.blog import Blog
-from app.models.user import User
+from api.auth.models.blog import Blog
+from api.auth.models.user import User
 
 class Post(Base):
     __tablename__ = "posts"

@@ -3,11 +3,18 @@ import sys
 from contextlib import asynccontextmanager
 
 import uvicorn
-from app.routers.auth import router as auth_router
-from app.routers.blog import router as blog_router
-from app.routers.post import router as post_router
-from app.core.config import settings
-from app.core.database import sessionmanager
+from api.auth.routers.auth import router as auth_router
+from api.auth.routers.blog import router as blog_router
+from api.auth.routers.post import router as post_router
+from api.auth.core.config import settings
+from api.auth.core.database import sessionmanager
+
+
+# from routers.auth import router as auth_router
+# from app.routers.blog import router as blog_router
+# from app.routers.post import router as post_router
+# from app.core.config import settings
+# from app.core.database import sessionmanager
 from fastapi import FastAPI
 
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)

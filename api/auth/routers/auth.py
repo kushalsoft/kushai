@@ -8,9 +8,9 @@ from fastapi.security import OAuth2PasswordRequestForm
 from pydantic import ValidationError
 
 
-from app.core.database import DBSessionDep
-from app.core.exceptions import BadRequestException, ForbiddenException, NotFoundException
-from app.core.jwt import (
+from api.auth.core.database import DBSessionDep
+from api.auth.core.exceptions import BadRequestException, ForbiddenException, NotFoundException
+from api.auth.core.jwt import (
     mail_token,
     create_token_pair,
     refresh_token_state,
@@ -20,10 +20,10 @@ from app.core.jwt import (
     SUB, JTI, EXP,
 )
 
-from app.utils.mail import user_mail_event
-from app.utils.hash import hash_password, verify_password
+from api.auth.utils.mail import user_mail_event
+from api.auth.utils.hash import hash_password, verify_password
 
-from app.models import User, BlackListToken
+from api.auth.models import User, BlackListToken
 
 from app.schemas.user import (
     User as UserSchema,

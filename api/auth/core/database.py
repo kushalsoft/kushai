@@ -1,7 +1,7 @@
 import contextlib
 from typing import Any, AsyncIterator, Annotated
 
-from app.core.config import settings
+from .config import settings
 from sqlalchemy.ext.asyncio import (
     AsyncConnection,
     AsyncSession,

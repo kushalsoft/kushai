@@ -4,15 +4,15 @@ import uuid
 from fastapi import APIRouter, Depends, HTTPException, status, Path
 from sqlalchemy import UUID
 
-from app.models.user import User
-from app.models.post import Post
-from app.models.blog import Blog
+from api.auth.models.user import User
+from api.auth.models.post import Post
+from api.auth.models.blog import Blog
 
-from app.schemas.post import Post as PostSchema, PostCreate
+from api.auth.schemas.post import Post as PostSchema, PostCreate
 
-from app.core.exceptions import AuthFailedException, BadRequestException, ForbiddenException, NotFoundException
-from app.core.database import DBSessionDep
-from app.core.jwt import (
+from api.auth.core.exceptions import AuthFailedException, BadRequestException, ForbiddenException, NotFoundException
+from api.auth.core.database import DBSessionDep
+from api.auth.core.jwt import (
     mail_token,
     create_token_pair,
     refresh_token_state,
