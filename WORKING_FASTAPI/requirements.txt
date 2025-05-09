@@ -1,0 +1,15 @@
+aitertools
+alembic
+asyncpg
+fastapi
+greenlet
+openai
+passlib
+passlib[bcrypt]
+pydantic-settings
+pydantic[email]
+python-jose[cryptography]
+python-multipart
+SQLAlchemy
+sse_starlette
+uvicorn
